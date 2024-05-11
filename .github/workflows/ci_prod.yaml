@@ -1,4 +1,4 @@
-  name: Portal Kerja Web UI Automation
+  name: Portal Kerja Web UI Automation - PROD Env
 
   on:
     workflow_dispatch:
@@ -9,8 +9,8 @@
           default: 'warning'
         tags:
           description: 'Dev Development Tags'
-    push:
-      branches: [ main ]
+#    push:
+#      branches: [ main ]
 
 #    schedule:
 #      - cron: '00 05 * * *'
@@ -24,7 +24,8 @@
           python-versions:
             - "3.11"
 
-      name: [PROD ENV] Test HRMS Portal Kerja
+
+      name: (PROD ENV) Test HRMS Portal Kerja
       runs-on: ${{ matrix.os }}
 
       steps:
@@ -48,7 +49,7 @@
           run: | 
             cd Test
             mkdir -p reports
-            python -m pytest -vs -m smoke --browser=chrome --url=prod --html=reports/report_in_production.html --self-contained-html
+            python -m pytest -vs -m smoke --browser=chrome -m smoke --url=prod --html=reports/report_in_production.html --self-contained-html
 
         - name: Set output --> upload artifact
           uses: actions/upload-artifact@v3

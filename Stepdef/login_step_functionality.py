@@ -1,7 +1,8 @@
 from Pages.basemethod import CustomMethod
 from Pages.loginmodalpage import LocLoginPage
+from Config.dataconfig import TestData
 
-class StepDefLogin(CustomMethod, LocLoginPage):
+class StepLoginFunc(CustomMethod, LocLoginPage):
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -11,8 +12,10 @@ class StepDefLogin(CustomMethod, LocLoginPage):
         self.fill_in(self.LOC_PWD_FIELD, password)
         self.click_to(self.LOC_LOGIN_BTN)
 
-    def login_as_super_admin(self):
-        pass
+    def login_as_super_admin_vpn27(self):
+        self.login_with_user_credential(TestData.SUPERADMIN_27, TestData.PWD_SUPERADMIN)
+        # self.get_text_of_element()
+        # --> verifikasi jika login as super admin berhasil dengan assert halaman dashboard hrms
 
     def login_as_jobseeker_only(self):
         pass
@@ -29,8 +32,7 @@ class StepDefLogin(CustomMethod, LocLoginPage):
     def login_as_employee_default(self):
         pass
 
-    def login_as_admin_default_child_company_first_register(self):
-        print("Expected cannot access HRMS")
+    def login_as_admin_default_child_company(self):
         pass
 
     def login_as_admin_custom_child_company(self):
