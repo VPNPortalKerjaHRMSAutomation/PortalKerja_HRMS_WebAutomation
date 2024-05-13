@@ -60,11 +60,11 @@
         - name: Run Pytest
           run: | 
             cd Test
-            python -m pytest -vs --browser=chrome -m smoke --url=testing --html=./reports/testingEnv_hrms_automation_test_report.html --self-contained-html
+            python -m pytest -vs --browser=chrome -m smoke --url=testing --html=./reports/TestEnv_hrms_automation_test_report.html --self-contained-html
 
         - name: Upload Report to Github Artifact
           uses: actions/upload-artifact@v4
           if: success() || failure()
           with:
-            name: Staging_HRMS_AutomationTestReports
-            path: Test/reports/testingEnv_hrms_automation_test_report.html
+            name: TestEnv_HRMS_AutomationTestReports
+            path: Test/reports/TestEnv_hrms_automation_test_report.html
