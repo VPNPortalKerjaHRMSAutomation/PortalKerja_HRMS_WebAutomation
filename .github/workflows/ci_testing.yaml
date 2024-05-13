@@ -1,4 +1,4 @@
-  name: STAGING - HRMS Web Automation Testing
+  name: TEST ENV - HRMS Web Automation Testing
 
   on:
     workflow_dispatch:
@@ -9,8 +9,8 @@
           default: 'warning'
         tags:
           description: 'Dev Development Tags'
-#    push:
-#      branches: [ main ]
+    push:
+      branches: [ main ]
 
   jobs:
     run-tests:
@@ -57,11 +57,11 @@
         - name: Run Pytest
           run: | 
             cd Test
-            python -m pytest -vs --browser=chrome -m smoke --url=staging --html=./reports/staging_hrms_automation_test_report.html --self-contained-html
+            python -m pytest -vs --browser=chrome -m smoke --url=testing --html=./reports/testingEnv_hrms_automation_test_report.html --self-contained-html
 
         - name: Upload Report to Github Artifact
           uses: actions/upload-artifact@v4
           if: success() || failure()
           with:
             name: Staging_HRMS_AutomationTestReports
-            path: Test/reports/staging_hrms_automation_test_report.html
+            path: Test/reports/testingEnv_hrms_automation_test_report.html

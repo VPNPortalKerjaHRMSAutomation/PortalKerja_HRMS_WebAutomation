@@ -1,4 +1,4 @@
-  name: DEV - HRMS Web Automation Testing
+  name: DEV ENV - HRMS Web Automation Testing
 
   on:
     workflow_dispatch:
@@ -9,8 +9,8 @@
           default: 'warning'
         tags:
           description: 'Dev Development Tags'
-    push:
-      branches: [ main ]
+#    push:
+#      branches: [ main ]
 
   jobs:
     run-tests:
