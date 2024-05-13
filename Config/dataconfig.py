@@ -2,9 +2,9 @@ import os
 
 class TestData:
     """this is base of url"""
-    BASE_URL_DEV = "https://accel.id"
-    BASE_URL_STAGING = "https://accel_staging.co.id"
-    BASE_URL_PROD = "https://accel_prod.co.id"
+    BASE_URL_DEV = "https://feedlot.id"
+    BASE_URL_TESTING = "https://accel.id"
+    BASE_URL_PROD = "https://portalkerja.co.id"
 
     """This is General Password"""
     PWD_SUPERADMIN = os.environ.get("PWD_SUPERADMIN")

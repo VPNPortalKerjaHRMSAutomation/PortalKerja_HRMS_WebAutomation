@@ -1,4 +1,4 @@
-  name: PROD - HRMS Web Automation Testing
+  name: PROD ENV - HRMS Web Automation Testing
 
   on:
     workflow_dispatch:

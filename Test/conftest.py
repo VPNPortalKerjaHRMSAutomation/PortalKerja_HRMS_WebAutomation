@@ -55,7 +55,7 @@ def setup_scope_function(request):
 
     if url == "dev":
         web_driver.get(TestData.BASE_URL_DEV)
-    elif url == "staging":
+    elif url == "testing":
         web_driver.get(TestData.BASE_URL_STAGING)
     elif url == "prod":
         web_driver.get(TestData.BASE_URL_PROD)
@@ -89,7 +89,7 @@ def setup_scope_class(request):
 
     if url == "dev":
         web_driver.get(TestData.BASE_URL_DEV)
-    elif url == "staging":
+    elif url == "testing":
         web_driver.get(TestData.BASE_URL_STAGING)
     elif url == "prod":
         web_driver.get(TestData.BASE_URL_PROD)
