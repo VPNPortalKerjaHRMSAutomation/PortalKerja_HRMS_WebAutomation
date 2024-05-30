@@ -17,6 +17,10 @@ class LocLandingPage:
     LOC_SIGNUP_BTN = (By.XPATH, '//button[@class="J-btnComp-primary  sm"]/span')    # Daftar | Sign Up
 
     # BODY SECTION
+    LOC_IMAGE_HEROBANNER = (By.XPATH, '//*[@class="hc-banner"]/div[1]/img')     # https://accel.id/static/media/banner.767ff05af73d74607595.png
+    LOC_KEYWORD_SEARCHBAR = (By.XPATH, '//*[@name="search"]')  # Job title, Keywords, Company | Posisi, Perusahaan
+    LOC_AREA_SEARCHBAR = (By.XPATH, '//*[@name="location"]')  # Area, city | Lokasi
+    LOC_FINDJOB_BTN = (By.XPATH, '//span[text()="Find Job"]')
 
     # FOOTER SECTION
     LOC_SITELINKS_TXT = (By.XPATH, '//div[@class="fc-early-mid"]')
